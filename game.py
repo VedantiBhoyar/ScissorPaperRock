@@ -1,23 +1,25 @@
 import random
+name = input("Enter your name to play the game: ")
+print(name," get ready to play")
 print("Choose your move.....")
-my_action = input("Rock, Paper or Scissors?")
-opponent_action = random.choice(["Rock", "Paper", "Scissors"])
-print(f"My choice is: {my_action}")
-print(f"Opponent Choose: {opponent_action}")
-if my_action == opponent_action:
-    print(f"Match is tie..... {my_action}")
-elif my_action == "Rock":
-    if opponent_action =="Scissors":
-        print("Rock smashes scissors.. I win!!")
+user_action = input("Rock, Paper or Scissors?")
+computer_action = random.choice(["Rock", "Paper", "Scissors"])
+print(f"My choice is: {user_action}")
+print(f"Computer choice is : {computer_action}")
+if user_action == computer_action:
+    print(f"Match is tie..... {user_action}")
+elif user_action == "Rock":
+    if computer_action =="Scissors":
+        print(name," wins!!!!!!!!")
     else:
-        print("Opponent Win!! paper covers rock")
-elif my_action == "Paper":
-    if opponent_action == "Rock":
-        print("I win!!! paper covers rock")
+        print("Computer wins!!!!!!!!")
+elif user_action == "Paper":
+    if computer_action == "Rock":
+        print(name," wins!!!!!!!!")
     else:
-        print("Opponent Win!! scissors cut paper")
-elif my_action == "Scissors":
-    if opponent_action == "Paper":
-        print("I Win!!! Scissors cut paper")
+        print("Computer wins!!!!!!!!")
+elif user_action == "Scissors":
+    if computer_action == "Paper":
+        print(name,"wins!!!!!!!!")
     else:
-        print("Opponent Win.. Rock smashes scissors")
+        print("Computer wins!!!!!!!!")
